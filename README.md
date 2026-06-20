@@ -89,8 +89,3 @@ Python 3.7+ のみ。外部ライブラリ不要。
 - **和算2.0**：https://www.ghostdriftresearch.com/wasan20
 - **GhostDrift数理研究所**：https://www.ghostdriftresearch.com
 
----
-
-## ライセンス
-
-MIT
