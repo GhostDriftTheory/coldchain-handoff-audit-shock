@@ -62,7 +62,7 @@ FATAL_VARIABLES = [
         "key": True,   # ← ここが変数切替点
     },
     {
-        "player": "納品先（中国地区病院群）",
+        "player": "納品先（C病院グループ）",
         "role":   "受け入れ可否を判断し、使用許可を出す",
         "fatal":  [
             "受入可否の判断（薬剤師確認）",
@@ -77,8 +77,8 @@ FATAL_VARIABLES = [
 DELIVERY = {
     "id":      "DEL-2026-0501",
     "cargo":   "インスリン製剤（バイオ医薬品・冷蔵管理対象）",
-    "shipper": "田辺製薬株式会社",
-    "route":   ["田辺製薬", "B物流", "大阪DC", "中国地区病院群"],
+    "shipper": "A製薬株式会社",
+    "route":   ["A製薬", "B物流", "大阪DC", "C病院グループ"],
     "arrival": "2026-05-10 16:10",
     # 既存システムの表示
     "legacy": {
@@ -208,7 +208,7 @@ def main():
     hfrom, hto, htime = h["from"], h["to"], h["time"]
     print(f"  {D(f'受け渡し：{hfrom} → {hto}  {htime}')}")
     blank()
-    print(B(Y("  荷主（田辺製薬）からの質問：")))
+    print(B(Y("  荷主（A製薬）からの質問：")))
     blank()
     print(B(f"  「 大阪DCは、この貨物を何℃条件で、"))
     print(B(f"      誰の責任として受け取りましたか？ 」"))
