@@ -240,6 +240,19 @@ if step == 1:
 st.markdown("## STEP 2 ── 記録はある。でも、同じ受け渡しを証明していない")
 
 st.markdown("""
+<div style="background:#f0f4ff;border-left:5px solid #4361ee;border-radius:0 6px 6px 0;padding:14px 18px;margin:0 0 18px">
+  <p style="font-size:0.75rem;font-weight:700;color:#4361ee;letter-spacing:0.1em;text-transform:uppercase;margin:0 0 8px">このデモの前提</p>
+  <p style="color:#1e3a8a;font-size:0.92rem;margin:0 0 6px;font-weight:600">
+    GDP対応していない現場を想定していません。<br>
+    むしろ、SOP・契約・温度ログ・入出庫記録が<strong>すべて揃っている現場</strong>を想定しています。
+  </p>
+  <p style="color:#1e40af;font-size:0.88rem;margin:0;line-height:1.65">
+    問いは一つです。<br>
+    それらの記録を、<strong>後から人が探して説明するのではなく</strong>、<br>
+    この1件の受け渡し証跡として、機械的に結合できますか？
+  </p>
+</div>
+
 <div class="pivot-note">
   B物流 → 大阪DC の受け渡しは、配送中の「温度を守る責任」から<br>
   倉庫での「受け取り・保管・出荷可否を判断する責任」に<strong>切り替わる唯一の瞬間</strong>です。<br>
@@ -253,9 +266,9 @@ st.markdown("""
   <div class="log-row"><div class="lk">実測温度</div><div class="lv">5.2℃</div></div>
   <div class="log-row"><div class="lk">配送 ID</div><div class="lv">DEL-2026-0501</div></div>
   <div class="log-divider">↓ ここから先が空欄</div>
-  <div class="log-row ng"><div class="lk">受け渡し ID</div><div class="lv">── なし</div></div>
-  <div class="log-row ng"><div class="lk">受領者</div><div class="lv">── なし</div></div>
-  <div class="log-row ng"><div class="lk">受領条件</div><div class="lv">── なし</div></div>
+  <div class="log-row ng"><div class="lk">受け渡し ID</div><div class="lv">── 別システム（手動確認が必要）</div></div>
+  <div class="log-row ng"><div class="lk">受領者</div><div class="lv">── 承認記録あり / 本受け渡しに未結合</div></div>
+  <div class="log-row ng"><div class="lk">受領条件</div><div class="lv">── SOP参照 / 自動結合なし</div></div>
 </div>
 
 <div class="log-card">
@@ -264,9 +277,9 @@ st.markdown("""
   <div class="log-row"><div class="lk">作業</div><div class="lv">B物流 → 大阪DC 引き渡し</div></div>
   <div class="log-row"><div class="lk">配送 ID</div><div class="lv">DEL-2026-0501</div></div>
   <div class="log-divider">↓ ここから先が空欄</div>
-  <div class="log-row ng"><div class="lk">受け渡し ID</div><div class="lv">── なし</div></div>
-  <div class="log-row ng"><div class="lk">受領条件</div><div class="lv">── なし</div></div>
-  <div class="log-row ng"><div class="lk">品質責任者</div><div class="lv">── なし</div></div>
+  <div class="log-row ng"><div class="lk">受け渡し ID</div><div class="lv">── 別システム（手動確認が必要）</div></div>
+  <div class="log-row ng"><div class="lk">受領条件</div><div class="lv">── 契約書参照 / 自動結合なし</div></div>
+  <div class="log-row ng"><div class="lk">品質責任者</div><div class="lv">── 権限記録あり / 受け渡しに未結合</div></div>
 </div>
 
 <div class="proof-box">
@@ -280,8 +293,9 @@ st.markdown("""
   <div class="verdict-item">✗ 大阪DCが温度条件を確認した記録がない</div>
   <div class="verdict-item">✗ 大阪DCが品質責任を引き受けた記録がない</div>
   <div class="verdict-conclusion">
-    記録がないのではありません。<br>
-    記録同士が「大阪DCがこの条件で受け取った」という<strong>1つの証拠になっていません</strong>。
+    記録がないのではありません。<strong>記録はあります</strong>。<br>
+    しかし、監査のたびに<strong>人が探してつなぎ直している</strong>のであれば、<br>
+    それは証跡の結合ではなく、説明の再構成です。
   </div>
 </div>
 """, unsafe_allow_html=True)
@@ -315,11 +329,12 @@ if step == 3:
 # ── STEP 4 : 記録なし ───────────────────────────
 st.markdown("""
 <div class="kinasashi">
-  <div class="km">1つの証跡として<br>再構成できません。</div>
+  <div class="km">人が探して<br>つなぎ直す必要があります。</div>
   <div class="ks">
     温度ログはあります。作業ログもあります。SOPも契約もあります。<br>
     しかし「12:00 の受け渡しで大阪DCが何℃条件・誰の引受権限で受け取ったか」を<br>
-    1本の証跡として示すことができません。
+    機械的に1本の証跡として結合できていません。<br>
+    監査のたびに、誰かが記録を探してつなぎ直しています。
   </div>
 </div>
 """, unsafe_allow_html=True)
@@ -379,14 +394,15 @@ st.markdown("""
 </div>
 
 <div class="pro-note">
-  <strong>製薬物流・品質保証の専門家の方へ：</strong><br>
-  これは「現場がずさんだ」というデモではありません。<br>
-  契約・SOP・温度ログ・WMS記録があっても、<strong>個別の受け渡し単位で証跡が結合されていなければ、荷主監査では答えられない</strong>という構造の問題です。<br>
-  GDPが求める「各当事者の義務・責任の明確化」と「追跡可能性」は、記録の存在だけでは満たされません。
+  <strong>製薬物流・品質保証・GDP対応済みの現場の方へ：</strong><br>
+  「うちはGDP・SOP・委託先監査・温度ロガー・WMSで対応しています」——それは正しいです。<br>
+  このデモはその対応を否定しません。<br>
+  問いはただ一つ：<strong>個別の受け渡し単位で、その記録を後から人が探すことなく機械的に1本の証跡として結合できますか？</strong><br>
+  「はい」と答えられる現場には、このデモは刺さりません。そうでなければ、刺さります。
 </div>
 
 <div class="adic-footer">
-  この「証跡の非結合」を機械的に検出する内部統制レイヤー：<strong>ADIC</strong>（Advanced Data Integrity by Ledger of Computation）<br>
+  この「記録はあるが結合されていない」状態を機械的に検出し、受け渡し単位で証跡を自動結合する内部統制レイヤー：<strong>ADIC</strong>（Advanced Data Integrity by Ledger of Computation）<br>
   GhostDrift数理研究所 ／ <a href="https://www.ghostdriftresearch.com">ghostdriftresearch.com</a><br>
   Lean 4 形式証明：<a href="https://github.com/GhostDriftTheory/adic-lean-proof-replay">github.com/GhostDriftTheory/adic-lean-proof-replay</a>
 </div>
