@@ -112,19 +112,20 @@ h2 {
 .gloss-desc { font-size:0.82rem; color:#718096; line-height:1.7; }
 /* dark final section */
 .dark-wrap { background:#0f172a; border-radius:12px; padding:28px 26px; margin:8px 0; }
-.dark-eyebrow { font-size:0.72rem; font-weight:700; color:#64748b;
-    letter-spacing:0.14em; text-transform:uppercase; margin:0 0 20px; }
-.dark-sec-label-blue { font-size:0.72rem; font-weight:700; color:#4361ee;
-    letter-spacing:0.1em; text-transform:uppercase; margin:0 0 12px; }
-.dark-sec-label-amber { font-size:0.72rem; font-weight:700; color:#d97706;
-    letter-spacing:0.1em; text-transform:uppercase; margin:0 0 12px; }
-.dark-body { font-size:0.92rem; color:#cbd5e1; line-height:1.75; margin:0 0 12px; }
-.dark-body strong { color:#e2e8f0; }
-.dark-sub { font-size:0.88rem; color:#94a3b8; line-height:1.7; margin:0 0 8px; }
-.dark-headline { font-size:0.97rem; font-weight:700; color:#f1f5f9;
-    margin:0 0 16px; line-height:1.5; }
-.dark-closer { font-size:0.97rem; font-weight:700; color:#f1f5f9;
-    margin:0 0 6px; line-height:1.5; }
+.dark-wrap p, .dark-wrap div, .dark-wrap span { color:#cbd5e1; }
+.dark-eyebrow { font-size:0.72rem !important; font-weight:700 !important; color:#64748b !important;
+    letter-spacing:0.14em; text-transform:uppercase; margin:0 0 20px !important; }
+.dark-sec-label-blue { font-size:0.72rem !important; font-weight:700 !important; color:#4361ee !important;
+    letter-spacing:0.1em; text-transform:uppercase; margin:0 0 12px !important; }
+.dark-sec-label-amber { font-size:0.72rem !important; font-weight:700 !important; color:#d97706 !important;
+    letter-spacing:0.1em; text-transform:uppercase; margin:0 0 12px !important; }
+.dark-body { font-size:0.92rem !important; color:#cbd5e1 !important; line-height:1.75; margin:0 0 12px !important; }
+.dark-em { color:#e2e8f0 !important; font-weight:700; }
+.dark-sub { font-size:0.88rem !important; color:#94a3b8 !important; line-height:1.7; margin:0 0 8px !important; }
+.dark-headline { font-size:0.97rem !important; font-weight:700 !important; color:#f1f5f9 !important;
+    margin:0 0 16px !important; line-height:1.5; }
+.dark-closer { font-size:0.97rem !important; font-weight:700 !important; color:#f1f5f9 !important;
+    margin:0 0 6px !important; line-height:1.5; }
 .badge-row { display:flex; gap:8px; flex-wrap:wrap; margin:4px 0 0; }
 .badge-g  { background:#166534; color:#bbf7d0; padding:4px 12px; border-radius:4px; font-size:0.8rem; font-weight:700; }
 .badge-y  { background:#854d0e; color:#fef9c3; padding:4px 12px; border-radius:4px; font-size:0.8rem; font-weight:700; }
@@ -376,61 +377,41 @@ for term, desc in GLOSSARY:
 
 # ── このデモの射程 ───────────────────────────────
 st.markdown("---")
-st.markdown('<div class="dark-wrap">', unsafe_allow_html=True)
-st.markdown('<p class="dark-eyebrow">このデモから拡張できること</p>', unsafe_allow_html=True)
-
-# Section 1
-st.markdown('<p class="dark-sec-label-blue">1. コールドチェーンの品質管理へ</p>', unsafe_allow_html=True)
-st.markdown(
-    '<p class="dark-body">コールドチェーンで本当に危ないのは、配送全体ではありません。'
-    '<strong>受け渡し・積み替え・一時保管のように、責任と判断が切り替わる瞬間</strong>です。</p>',
-    unsafe_allow_html=True,
-)
-st.markdown(
-    '<p class="dark-body">このデモは、その瞬間だけを切り出し、温度ログ・作業ログ・受領条件・承認記録を'
-    '<strong>1件の受け渡し証跡として結合する</strong>入口です。</p>',
-    unsafe_allow_html=True,
-)
-st.markdown('<p class="dark-sub">これにより、次の判断が記録に基づいて行えるようになります：</p>', unsafe_allow_html=True)
 st.markdown("""
-<div class="badge-row">
-  <span class="badge-g">RELEASE そのまま出荷</span>
-  <span class="badge-y">HOLD 一時保留</span>
-  <span class="badge-b">QA_REVIEW 品質確認</span>
-  <span class="badge-r">REJECT 出荷不可</span>
+<div class="dark-wrap">
+  <p class="dark-eyebrow">このデモから拡張できること</p>
+
+  <p class="dark-sec-label-blue">1. コールドチェーンの品質管理へ</p>
+  <p class="dark-body">コールドチェーンで本当に危ないのは、配送全体ではありません。<span class="dark-em">受け渡し・積み替え・一時保管のように、責任と判断が切り替わる瞬間</span>です。</p>
+  <p class="dark-body">このデモは、その瞬間だけを切り出し、温度ログ・作業ログ・受領条件・承認記録を<span class="dark-em">1件の受け渡し証跡として結合する</span>入口です。</p>
+  <p class="dark-sub">これにより、次の判断が記録に基づいて行えるようになります：</p>
+  <div class="badge-row">
+    <span class="badge-g">RELEASE そのまま出荷</span>
+    <span class="badge-y">HOLD 一時保留</span>
+    <span class="badge-b">QA_REVIEW 品質確認</span>
+    <span class="badge-r">REJECT 出荷不可</span>
+  </div>
+
+  <div class="dark-divider"></div>
+
+  <p class="dark-sec-label-amber">2. 自律型AI物流の前提へ</p>
+  <p class="dark-body">AIが配車・在庫・出荷判断に入るほど、判断の理由をあとから人が探して説明する運用では、<span class="dark-em">限界が来ます</span>。</p>
+  <p class="dark-headline">必要になるのは、最初から機械的に監査できる物流です。</p>
+  <div class="dark-cards">
+    <div class="dark-card">
+      <div class="dark-card-label">荷主にとって</div>
+      <div class="dark-card-text">委託先を含めたサプライチェーンを説明できる力</div>
+    </div>
+    <div class="dark-card">
+      <div class="dark-card-label">物流会社にとって</div>
+      <div class="dark-card-text">選ばれ続けるための証明能力</div>
+    </div>
+  </div>
+  <p class="dark-closer">AI物流の時代に、監査できない物流はブラックボックスになります。監査できる物流だけが、荷主から選ばれ続けます。</p>
+  <p class="dark-note">※内部的には、責任が切り替わる瞬間を切り出し、ADICで証跡を結合し、品質判断へ接続する構成です。</p>
 </div>
 """, unsafe_allow_html=True)
 
-st.markdown('<div class="dark-divider"></div>', unsafe_allow_html=True)
-
-# Section 2
-st.markdown('<p class="dark-sec-label-amber">2. 自律型AI物流の前提へ</p>', unsafe_allow_html=True)
-st.markdown(
-    '<p class="dark-body">AIが配車・在庫・出荷判断に入るほど、判断の理由をあとから人が探して説明する運用では、<strong>限界が来ます</strong>。</p>',
-    unsafe_allow_html=True,
-)
-st.markdown('<p class="dark-headline">必要になるのは、最初から機械的に監査できる物流です。</p>', unsafe_allow_html=True)
-st.markdown("""
-<div class="dark-cards">
-  <div class="dark-card">
-    <div class="dark-card-label">荷主にとって</div>
-    <div class="dark-card-text">委託先を含めたサプライチェーンを説明できる力</div>
-  </div>
-  <div class="dark-card">
-    <div class="dark-card-label">物流会社にとって</div>
-    <div class="dark-card-text">選ばれ続けるための証明能力</div>
-  </div>
-</div>
-""", unsafe_allow_html=True)
-st.markdown(
-    '<p class="dark-closer">AI物流の時代に、監査できない物流はブラックボックスになります。<br>監査できる物流だけが、荷主から選ばれ続けます。</p>',
-    unsafe_allow_html=True,
-)
-st.markdown(
-    '<p class="dark-note">※内部的には、責任が切り替わる瞬間を切り出し、ADICで証跡を結合し、品質判断へ接続する構成です。</p>',
-    unsafe_allow_html=True,
-)
-st.markdown('</div>', unsafe_allow_html=True)
 
 # ── Footer ──────────────────────────────────────
 st.markdown("""
