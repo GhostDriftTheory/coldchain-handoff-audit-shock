@@ -142,9 +142,8 @@ h2 {
 .dark-proof-block { background:#1e293b; border-radius:6px; padding:14px 18px; margin:12px 0; }
 .dark-proof-line { font-size:0.92rem !important; color:#e2e8f0 !important; font-weight:600; margin:2px 0 !important; line-height:1.6; }
 .dark-check-list { margin:12px 0 14px; }
-.dark-check-item { font-size:0.88rem; color:#94a3b8; padding:5px 0 5px 18px;
-    border-bottom:1px solid #1e293b; line-height:1.5; position:relative; }
-.dark-check-item::before { content:"\2192"; position:absolute; left:0; color:#64748b; }
+.dark-check-item { font-size:0.88rem; color:#94a3b8; padding:5px 0 5px 4px;
+    border-bottom:1px solid #1e293b; line-height:1.5; }
 .dark-check-item:last-child { border-bottom:none; }
 .dark-closer-accent { font-size:1.05rem !important; font-weight:900 !important;
     color:#fff !important; margin:4px 0 !important; line-height:1.4; }
@@ -414,10 +413,10 @@ st.markdown("""
   <p class="dark-headline">さらにADICは、それが本当に成立していたかまで検査します。</p>
   <p class="dark-body">証跡がつながるだけでは足りません。荷主はさらに一段深く確認できます。</p>
   <div class="dark-check-list">
-    <div class="dark-check-item">確認した温度は有効な記録か</div>
-    <div class="dark-check-item">確認した人に受領権限はあったか</div>
-    <div class="dark-check-item">受領条件は契約・SOPと一致していたか</div>
-    <div class="dark-check-item">その後の保管・出荷判断まで、同じ条件でつながっていたか</div>
+    <div class="dark-check-item">→ 確認した温度は有効な記録か</div>
+    <div class="dark-check-item">→ 確認した人に受領権限はあったか</div>
+    <div class="dark-check-item">→ 受領条件は契約・SOPと一致していたか</div>
+    <div class="dark-check-item">→ その後の保管・出荷判断まで、同じ条件でつながっていたか</div>
   </div>
   <p class="dark-sub">ADICが見るのは、記録があるかどうかだけではありません。その記録によって、「この受け渡しで品質責任が成立していた」と言えるかまでを検査します。</p>
 
@@ -455,4 +454,3 @@ st.markdown("""
   Lean 4 形式証明：<a href="https://github.com/GhostDriftTheory/adic-lean-proof-replay">github.com/GhostDriftTheory/adic-lean-proof-replay</a>
 </div>
 """, unsafe_allow_html=True)
-
