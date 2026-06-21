@@ -408,50 +408,134 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
+
+# ── 用語解説 ────────────────────────────────────
+st.markdown("---")
+st.markdown(
+    "<p style=\'font-size:0.72rem;font-weight:700;color:#aaa;letter-spacing:0.14em;"
+    "text-transform:uppercase;margin:0 0 14px\'>このデモで出てくる言葉</p>",
+    unsafe_allow_html=True,
+)
+
+glossary_terms = [
+    ("SOP",
+     "社内の作業手順書。誰が・どの条件で・どう作業するかを定めたルール。<br>"
+     "温度管理・積み替え手順・受領確認など、各工程ごとに存在する。"),
+    ("GDP（Good Distribution Practice）",
+     "医薬品を安全に保管・輸送するための品質管理基準。<br>"
+     "製造後、病院や患者に届くまでのサプライチェーン全体に適用される。<br>"
+     "EU・日本ともに、外部委託先への管理責任・書面契約・監査を要求している。"),
+    ("逸脱",
+     "決められた温度・時間・手順などから外れること。<br>"
+     "逸脱が起きた場合は、原因・影響・対応を記録し、品質判断を経る必要がある。"),
+    ("証跡（しょうせき）",
+     "あとから「何が起きたか」「誰が判断したか」「どの条件で進めたか」を確認できる記録。<br>"
+     "単に記録が存在するだけでなく、1件の出来事として結合されていることが重要。"),
+    ("受け渡しID",
+     "1回の受け渡しイベントに紐づく識別子。<br>"
+     "温度ログ・作業ログ・受領記録が同じIDを持つことで「この受け渡しの証跡」として結合できる。<br>"
+     "これがないと、記録はあっても別々のデータのままになる。"),
+    ("ADICが見ているもの",
+     "記録の有無ではなく、それらの記録が「1件の受け渡し」として結合されているか。<br>"
+     "SOPも契約も温度ログも揃っていても、受け渡しIDでつながっていなければ、<br>"
+     "監査のたびに人が探してつなぎ直す必要が生じる。"),
+]
+
+for term, desc in glossary_terms:
+    st.markdown(f"""
+<div style="border-left:3px solid #e2e8f0;padding:9px 16px;margin:8px 0">
+  <div style="font-weight:700;font-size:0.88rem;color:#4a5568;margin-bottom:4px">{term}</div>
+  <div style="font-size:0.82rem;color:#718096;line-height:1.7">{desc}</div>
+</div>
+""", unsafe_allow_html=True)
+
+# ── このデモの射程 ───────────────────────────────
 st.markdown("---")
 st.markdown("""
-<div style="margin-top:8px">
-  <p style="font-size:0.75rem;font-weight:700;color:#aaa;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:14px">
-    このデモで出てくる言葉
+<div style="background:#0f172a;color:#fff;border-radius:12px;padding:28px 26px;margin:8px 0">
+  <p style="font-size:0.72rem;font-weight:700;color:#64748b;letter-spacing:0.14em;
+            text-transform:uppercase;margin:0 0 14px">このデモの先にあるもの</p>
+
+  <p style="font-size:1.05rem;font-weight:800;color:#fff;margin:0 0 20px;line-height:1.4">
+    B物流 → 大阪DC の受け渡しを、3つのレイヤーで処理します。
   </p>
 
-  <div style="display:grid;gap:10px">
+  <div style="display:grid;gap:1px;background:#1e293b;border-radius:8px;overflow:hidden;margin-bottom:24px">
 
-    <div style="border-left:3px solid #e2e8f0;padding:8px 14px">
-      <div style="font-weight:700;font-size:0.88rem;color:#4a5568;margin-bottom:3px">SOP</div>
-      <div style="font-size:0.82rem;color:#718096;line-height:1.6">
-        社内の作業手順。誰が・どの条件で・どう作業するかを決めたルール。
+    <div style="background:#1e293b;padding:14px 18px">
+      <div style="font-size:0.72rem;font-weight:700;color:#94a3b8;letter-spacing:0.1em;
+                  text-transform:uppercase;margin-bottom:6px">UWP（有限窓）</div>
+      <div style="font-size:0.92rem;font-weight:700;color:#e2e8f0;margin-bottom:4px">
+        責任が切り替わる瞬間だけを切り出す
+      </div>
+      <div style="font-size:0.82rem;color:#94a3b8;line-height:1.6">
+        配送全行程を監視するのではなく、B物流→大阪DCの12:00という<br>
+        「誰が・どの条件を引き受けるか」が決まる瞬間だけを有限の窓として切り出す。
       </div>
     </div>
 
-    <div style="border-left:3px solid #e2e8f0;padding:8px 14px">
-      <div style="font-weight:700;font-size:0.88rem;color:#4a5568;margin-bottom:3px">GDP（Good Distribution Practice）</div>
-      <div style="font-size:0.82rem;color:#718096;line-height:1.6">
-        医薬品を安全に保管・輸送するための品質管理ルール。製造後、病院や患者に届くまでの管理基準。
+    <div style="background:#172033;padding:14px 18px">
+      <div style="font-size:0.72rem;font-weight:700;color:#94a3b8;letter-spacing:0.1em;
+                  text-transform:uppercase;margin-bottom:6px">ADIC</div>
+      <div style="font-size:0.92rem;font-weight:700;color:#e2e8f0;margin-bottom:4px">
+        温度ログ・作業ログ・受領記録を1本の証跡として結合する
+      </div>
+      <div style="font-size:0.82rem;color:#94a3b8;line-height:1.6">
+        別々に存在する記録を同一の受け渡しイベントとして束ね、<br>
+        あとから人が探してつなぎ直す必要をなくす。
       </div>
     </div>
 
-    <div style="border-left:3px solid #e2e8f0;padding:8px 14px">
-      <div style="font-weight:700;font-size:0.88rem;color:#4a5568;margin-bottom:3px">逸脱</div>
-      <div style="font-size:0.82rem;color:#718096;line-height:1.6">
-        決められた温度・時間・手順などから外れること。外れた場合は、原因・影響・対応を記録する。
+    <div style="background:#1e293b;padding:14px 18px">
+      <div style="font-size:0.72rem;font-weight:700;color:#94a3b8;letter-spacing:0.1em;
+                  text-transform:uppercase;margin-bottom:6px">品質判断（PDE）</div>
+      <div style="font-size:0.92rem;font-weight:700;color:#e2e8f0;margin-bottom:4px">
+        この貨物をどうするか、機械的に判定する
       </div>
-    </div>
-
-    <div style="border-left:3px solid #e2e8f0;padding:8px 14px">
-      <div style="font-weight:700;font-size:0.88rem;color:#4a5568;margin-bottom:3px">証跡（しょうせき）</div>
-      <div style="font-size:0.82rem;color:#718096;line-height:1.6">
-        あとから「何が起きたか」「誰が判断したか」「どの条件で進めたか」を確認できる記録。
-      </div>
-    </div>
-
-    <div style="border-left:3px solid #e2e8f0;padding:8px 14px;background:#f7fafc">
-      <div style="font-weight:700;font-size:0.88rem;color:#4a5568;margin-bottom:3px">ADICが見ているもの</div>
-      <div style="font-size:0.82rem;color:#718096;line-height:1.6">
-        記録があるかどうかではなく、それらの記録が「1件の受け渡し」としてつながっているか。
+      <div style="font-size:0.82rem;margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">
+        <span style="background:#166534;color:#bbf7d0;padding:3px 10px;border-radius:4px;font-size:0.78rem;font-weight:700">RELEASE</span>
+        <span style="background:#854d0e;color:#fef9c3;padding:3px 10px;border-radius:4px;font-size:0.78rem;font-weight:700">HOLD</span>
+        <span style="background:#1d4ed8;color:#dbeafe;padding:3px 10px;border-radius:4px;font-size:0.78rem;font-weight:700">QA_REVIEW</span>
+        <span style="background:#991b1b;color:#fee2e2;padding:3px 10px;border-radius:4px;font-size:0.78rem;font-weight:700">REJECT</span>
       </div>
     </div>
 
   </div>
+
+  <div style="border-top:1px solid #1e293b;padding-top:20px">
+    <p style="font-size:0.95rem;font-weight:700;color:#e2e8f0;margin:0 0 12px;line-height:1.5">
+      AIが配車・在庫・出荷判断に入るほど、<br>
+      「あとから人が説明する物流」ではなく<br>
+      「最初から機械的に監査できる物流」が選ばれます。
+    </p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px">
+      <div style="background:#1e293b;border-radius:6px;padding:12px 14px">
+        <div style="font-size:0.72rem;color:#64748b;font-weight:600;letter-spacing:0.06em;
+                    text-transform:uppercase;margin-bottom:5px">荷主にとって</div>
+        <div style="font-size:0.88rem;color:#e2e8f0;font-weight:600;line-height:1.5">
+          サプライチェーンを<br>説明できる力
+        </div>
+      </div>
+      <div style="background:#1e293b;border-radius:6px;padding:12px 14px">
+        <div style="font-size:0.72rem;color:#64748b;font-weight:600;letter-spacing:0.06em;
+                    text-transform:uppercase;margin-bottom:5px">物流会社にとって</div>
+        <div style="font-size:0.88rem;color:#e2e8f0;font-weight:600;line-height:1.5">
+          選ばれ続けるための<br>証明能力
+        </div>
+      </div>
+    </div>
+    <p style="font-size:0.82rem;color:#64748b;margin:16px 0 0;line-height:1.65">
+      AI物流の時代に、監査できない物流はブラックボックスになります。<br>
+      監査できる物流だけが、荷主から選ばれ続けます。
+    </p>
+  </div>
+</div>
+""", unsafe_allow_html=True)
+
+st.markdown("""
+<div class="adic-footer">
+  ADIC（Advanced Data Integrity by Ledger of Computation）<br>
+  GhostDrift数理研究所 ／ <a href="https://www.ghostdriftresearch.com">ghostdriftresearch.com</a><br>
+  Lean 4 形式証明：<a href="https://github.com/GhostDriftTheory/adic-lean-proof-replay">github.com/GhostDriftTheory/adic-lean-proof-replay</a>
 </div>
 """, unsafe_allow_html=True)
