@@ -137,6 +137,17 @@ h2 {
 .dark-card-label { font-size:0.7rem; color:#64748b; font-weight:600;
     letter-spacing:0.06em; text-transform:uppercase; margin-bottom:5px; }
 .dark-card-text { font-size:0.88rem; color:#e2e8f0; font-weight:600; line-height:1.5; }
+.dark-quote-block { border-left:2px solid #334155; padding:8px 16px; margin:10px 0; }
+.dark-quote-line { font-size:0.88rem !important; color:#64748b !important; margin:2px 0 !important; font-style:italic; }
+.dark-proof-block { background:#1e293b; border-radius:6px; padding:14px 18px; margin:12px 0; }
+.dark-proof-line { font-size:0.92rem !important; color:#e2e8f0 !important; font-weight:600; margin:2px 0 !important; line-height:1.6; }
+.dark-check-list { margin:12px 0 14px; }
+.dark-check-item { font-size:0.88rem; color:#94a3b8; padding:5px 0 5px 18px;
+    border-bottom:1px solid #1e293b; line-height:1.5; position:relative; }
+.dark-check-item::before { content:"\2192"; position:absolute; left:0; color:#64748b; }
+.dark-check-item:last-child { border-bottom:none; }
+.dark-closer-accent { font-size:1.05rem !important; font-weight:900 !important;
+    color:#fff !important; margin:4px 0 !important; line-height:1.4; }
 .dark-note { font-size:0.75rem; color:#475569; margin:16px 0 0;
     line-height:1.6; border-top:1px solid #1e293b; padding-top:14px; }
 /* footer */
@@ -379,36 +390,59 @@ for term, desc in GLOSSARY:
 st.markdown("---")
 st.markdown("""
 <div class="dark-wrap">
-  <p class="dark-eyebrow">このデモから拡張できること</p>
+  <p class="dark-eyebrow">このデモの次にできること</p>
 
-  <p class="dark-sec-label-blue">1. コールドチェーンの品質管理へ</p>
-  <p class="dark-body">コールドチェーンで本当に危ないのは、配送全体ではありません。<span class="dark-em">受け渡し・積み替え・一時保管のように、責任と判断が切り替わる瞬間</span>です。</p>
-  <p class="dark-body">このデモは、その瞬間だけを切り出し、温度ログ・作業ログ・受領条件・承認記録を<span class="dark-em">1件の受け渡し証跡として結合する</span>入口です。</p>
-  <p class="dark-sub">これにより、次の判断が記録に基づいて行えるようになります：</p>
-  <div class="badge-row">
-    <span class="badge-g">RELEASE そのまま出荷</span>
-    <span class="badge-y">HOLD 一時保留</span>
-    <span class="badge-b">QA_REVIEW 品質確認</span>
-    <span class="badge-r">REJECT 出荷不可</span>
+  <p class="dark-body">この受け渡しで、誰が・何℃条件で・どの責任を引き受けたかが特定できると、<span class="dark-em">荷主は物流会社や倉庫会社の管理を、より本格的に検査できるようになります。</span></p>
+
+  <p class="dark-sub">なぜなら、これまでは</p>
+  <div class="dark-quote-block">
+    <p class="dark-quote-line">「温度ログはあります」</p>
+    <p class="dark-quote-line">「作業記録はあります」</p>
+    <p class="dark-quote-line">「契約上はこうなっています」</p>
+  </div>
+  <p class="dark-sub">という別々の説明に頼っていたものを、</p>
+  <div class="dark-proof-block">
+    <p class="dark-proof-line">「この1件の受け渡しで、</p>
+    <p class="dark-proof-line">大阪DCが5.2℃を確認し、</p>
+    <p class="dark-proof-line">2〜8℃条件の貨物として受け取り、</p>
+    <p class="dark-proof-line">品質責任を引き受けた」</p>
+  </div>
+  <p class="dark-sub">という形で確認できるからです。</p>
+
+  <div class="dark-divider"></div>
+
+  <p class="dark-headline">さらにADICは、それが本当に成立していたかまで検査します。</p>
+  <p class="dark-body">証跡がつながるだけでは足りません。荷主はさらに一段深く確認できます。</p>
+  <div class="dark-check-list">
+    <div class="dark-check-item">確認した温度は有効な記録か</div>
+    <div class="dark-check-item">確認した人に受領権限はあったか</div>
+    <div class="dark-check-item">受領条件は契約・SOPと一致していたか</div>
+    <div class="dark-check-item">その後の保管・出荷判断まで、同じ条件でつながっていたか</div>
+  </div>
+  <p class="dark-sub">ADICが見るのは、記録があるかどうかだけではありません。その記録によって、「この受け渡しで品質責任が成立していた」と言えるかまでを検査します。</p>
+
+  <div class="dark-divider"></div>
+
+  <div class="dark-cards">
+    <div class="dark-card">
+      <div class="dark-card-label">荷主にとって</div>
+      <div class="dark-card-text">委託先の品質管理を、配送全体の報告ではなく受け渡し単位で検査できる</div>
+    </div>
+    <div class="dark-card">
+      <div class="dark-card-label">物流会社にとって</div>
+      <div class="dark-card-text">自社の管理品質を「言葉」ではなく「証跡」で示せる</div>
+    </div>
   </div>
 
   <div class="dark-divider"></div>
 
-  <p class="dark-sec-label-amber">2. 自律型AI物流の前提へ</p>
-  <p class="dark-body">AIが配車・在庫・出荷判断に入るほど、判断の理由をあとから人が探して説明する運用では、<span class="dark-em">限界が来ます</span>。</p>
-  <p class="dark-headline">必要になるのは、最初から機械的に監査できる物流です。</p>
-  <div class="dark-cards">
-    <div class="dark-card">
-      <div class="dark-card-label">荷主にとって</div>
-      <div class="dark-card-text">委託先を含めたサプライチェーンを説明できる力</div>
-    </div>
-    <div class="dark-card">
-      <div class="dark-card-label">物流会社にとって</div>
-      <div class="dark-card-text">選ばれ続けるための証明能力</div>
-    </div>
-  </div>
-  <p class="dark-closer">AI物流の時代に、監査できない物流はブラックボックスになります。監査できる物流だけが、荷主から選ばれ続けます。</p>
-  <p class="dark-note">※内部的には、責任が切り替わる瞬間を切り出し、ADICで証跡を結合し、品質判断へ接続する構成です。</p>
+  <p class="dark-closer">これからのコールドチェーンでは、温度を守るだけでは足りません。</p>
+  <p class="dark-closer">荷主が委託先の品質管理を、受け渡し単位で検査できること。</p>
+  <p class="dark-closer-accent">それが、選ばれる物流の条件になります。</p>
+
+  <p class="dark-sub" style="margin-top:16px">さらに、AIが配車・在庫・出荷判断に入るほど、この検査可能性が必須になります。監査できない物流はブラックボックスになり、監査できる物流だけが荷主から選ばれ続けます。</p>
+
+  <p class="dark-note">※内部的には、責任が切り替わる瞬間を切り出し、ADICで証跡を結合し、成立条件を検査する構成です。</p>
 </div>
 """, unsafe_allow_html=True)
 
