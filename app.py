@@ -455,3 +455,4 @@ st.markdown("""
   Lean 4 形式証明：<a href="https://github.com/GhostDriftTheory/adic-lean-proof-replay">github.com/GhostDriftTheory/adic-lean-proof-replay</a>
 </div>
 """, unsafe_allow_html=True)
+
