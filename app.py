@@ -183,7 +183,7 @@ def advance(): st.session_state.step += 1
 
 # ── Data ───────────────────────────────────────
 AUDIT_4Q = [
-    ("温度条件はSOPにあります。",
+    ("温度条件は、SOP（社内の作業手順）にあります。",
      "この受け渡し記録に紐づいていますか？",
      "SOPと個別配送記録が別システム。この受け渡し時点での紐づけが確認できません。"),
     ("停止条件は契約にあります。",
@@ -244,7 +244,7 @@ st.markdown("""
   <p style="font-size:0.75rem;font-weight:700;color:#4361ee;letter-spacing:0.1em;text-transform:uppercase;margin:0 0 8px">このデモの前提</p>
   <p style="color:#1e3a8a;font-size:0.92rem;margin:0 0 6px;font-weight:600">
     GDP対応していない現場を想定していません。<br>
-    むしろ、SOP・契約・温度ログ・入出庫記録が<strong>すべて揃っている現場</strong>を想定しています。
+    むしろ、SOP（作業手順）・契約・温度ログ・入出庫記録が<strong>すべて揃っている現場</strong>を想定しています。
   </p>
   <p style="color:#1e40af;font-size:0.88rem;margin:0;line-height:1.65">
     問いは一つです。<br>
@@ -405,5 +405,53 @@ st.markdown("""
   この「記録はあるが結合されていない」状態を機械的に検出し、受け渡し単位で証跡を自動結合する内部統制レイヤー：<strong>ADIC</strong>（Advanced Data Integrity by Ledger of Computation）<br>
   GhostDrift数理研究所 ／ <a href="https://www.ghostdriftresearch.com">ghostdriftresearch.com</a><br>
   Lean 4 形式証明：<a href="https://github.com/GhostDriftTheory/adic-lean-proof-replay">github.com/GhostDriftTheory/adic-lean-proof-replay</a>
+</div>
+""", unsafe_allow_html=True)
+
+st.markdown("---")
+st.markdown("""
+<div style="margin-top:8px">
+  <p style="font-size:0.75rem;font-weight:700;color:#aaa;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:14px">
+    このデモで出てくる言葉
+  </p>
+
+  <div style="display:grid;gap:10px">
+
+    <div style="border-left:3px solid #e2e8f0;padding:8px 14px">
+      <div style="font-weight:700;font-size:0.88rem;color:#4a5568;margin-bottom:3px">SOP</div>
+      <div style="font-size:0.82rem;color:#718096;line-height:1.6">
+        社内の作業手順。誰が・どの条件で・どう作業するかを決めたルール。
+      </div>
+    </div>
+
+    <div style="border-left:3px solid #e2e8f0;padding:8px 14px">
+      <div style="font-weight:700;font-size:0.88rem;color:#4a5568;margin-bottom:3px">GDP（Good Distribution Practice）</div>
+      <div style="font-size:0.82rem;color:#718096;line-height:1.6">
+        医薬品を安全に保管・輸送するための品質管理ルール。製造後、病院や患者に届くまでの管理基準。
+      </div>
+    </div>
+
+    <div style="border-left:3px solid #e2e8f0;padding:8px 14px">
+      <div style="font-weight:700;font-size:0.88rem;color:#4a5568;margin-bottom:3px">逸脱</div>
+      <div style="font-size:0.82rem;color:#718096;line-height:1.6">
+        決められた温度・時間・手順などから外れること。外れた場合は、原因・影響・対応を記録する。
+      </div>
+    </div>
+
+    <div style="border-left:3px solid #e2e8f0;padding:8px 14px">
+      <div style="font-weight:700;font-size:0.88rem;color:#4a5568;margin-bottom:3px">証跡（しょうせき）</div>
+      <div style="font-size:0.82rem;color:#718096;line-height:1.6">
+        あとから「何が起きたか」「誰が判断したか」「どの条件で進めたか」を確認できる記録。
+      </div>
+    </div>
+
+    <div style="border-left:3px solid #e2e8f0;padding:8px 14px;background:#f7fafc">
+      <div style="font-weight:700;font-size:0.88rem;color:#4a5568;margin-bottom:3px">ADICが見ているもの</div>
+      <div style="font-size:0.82rem;color:#718096;line-height:1.6">
+        記録があるかどうかではなく、それらの記録が「1件の受け渡し」としてつながっているか。
+      </div>
+    </div>
+
+  </div>
 </div>
 """, unsafe_allow_html=True)
