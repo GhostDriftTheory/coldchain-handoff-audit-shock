@@ -20,148 +20,127 @@ st.markdown("""
     margin: 0 auto;
 }
 h1 {
-    font-size: 1.5rem !important;
-    font-weight: 900 !important;
-    letter-spacing: -0.02em;
-    color: #111;
-    line-height: 1.3 !important;
-    margin-bottom: 4px !important;
+    font-size: 1.5rem !important; font-weight: 900 !important;
+    letter-spacing: -0.02em; color: #111;
+    line-height: 1.3 !important; margin-bottom: 4px !important;
 }
 h2 {
-    font-size: 0.72rem !important;
-    font-weight: 700 !important;
-    color: #aaa;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 8px;
+    font-size: 0.72rem !important; font-weight: 700 !important;
+    color: #aaa; letter-spacing: 0.14em; text-transform: uppercase;
+    border-bottom: 1px solid #eee; padding-bottom: 8px;
     margin: 36px 0 16px !important;
 }
-/* shock */
-.shock {
-    border-left: 5px solid #c53030;
-    background: #fff5f5;
-    padding: 14px 18px;
-    border-radius: 0 6px 6px 0;
-    margin: 12px 0 18px;
-}
-.shock p { margin: 2px 0; color: #c53030; font-weight: 700; font-size: 1.05rem; }
-/* legacy */
-.legacy-wrap { border: 1px solid #eee; border-radius: 8px; overflow: hidden; margin: 12px 0; }
-.legacy-row  { display: flex; border-bottom: 1px solid #f5f5f5; font-size: 0.9rem; }
-.legacy-row:last-child { border-bottom: none; }
-.legacy-key  { width: 100px; flex-shrink:0; padding: 8px 14px; color:#bbb; background:#fafafa; font-size:0.82rem; }
-.legacy-val  { padding: 8px 14px; color:#222; font-weight:500; flex:1; }
-.status-complete {
-    background:#f0fff4; border:2px solid #38a169; border-radius:6px;
+.shock { border-left:5px solid #c53030; background:#fff5f5;
+         padding:14px 18px; border-radius:0 6px 6px 0; margin:12px 0 18px; }
+.shock p { margin:2px 0; color:#c53030; font-weight:700; font-size:1.05rem; }
+.legacy-wrap { border:1px solid #eee; border-radius:8px; overflow:hidden; margin:12px 0; }
+.legacy-row  { display:flex; border-bottom:1px solid #f5f5f5; font-size:0.9rem; }
+.legacy-row:last-child { border-bottom:none; }
+.legacy-key  { width:100px; flex-shrink:0; padding:8px 14px; color:#bbb; background:#fafafa; font-size:0.82rem; }
+.legacy-val  { padding:8px 14px; color:#222; font-weight:500; flex:1; }
+.status-complete { background:#f0fff4; border:2px solid #38a169; border-radius:6px;
     padding:12px 18px; margin:12px 0; text-align:center;
-    font-size:1.05rem; font-weight:800; color:#276749;
-}
-/* pivot note */
-.pivot-note {
-    background:#f7f7f7; border-radius:6px; padding:12px 16px;
-    margin:14px 0; font-size:0.88rem; color:#555; line-height:1.65;
-}
+    font-size:1.05rem; font-weight:800; color:#276749; }
+.pivot-note { background:#f7f7f7; border-radius:6px; padding:12px 16px;
+    margin:14px 0; font-size:0.88rem; color:#555; line-height:1.65; }
 .pivot-note strong { color:#111; }
-/* log section */
-.log-header {
-    font-size:0.78rem; font-weight:700; color:#888;
-    letter-spacing:0.06em; text-transform:uppercase;
-    margin: 18px 0 10px;
-}
-.log-card {
-    border:1px solid #eee; border-radius:8px;
-    overflow:hidden; margin:8px 0;
-}
-.log-card-title {
-    background:#f7f7f7; padding:8px 14px;
-    font-size:0.82rem; font-weight:700; color:#666;
-    border-bottom:1px solid #eee;
-}
-.log-row {
-    display:flex; border-bottom:1px solid #f9f9f9;
-    font-size:0.88rem;
-}
+.log-hdr { font-size:0.78rem; font-weight:700; color:#888;
+    letter-spacing:0.06em; text-transform:uppercase; margin:18px 0 10px; }
+.log-card { border:1px solid #eee; border-radius:8px; overflow:hidden; margin:8px 0; }
+.log-card-title { background:#f7f7f7; padding:8px 14px;
+    font-size:0.82rem; font-weight:700; color:#666; border-bottom:1px solid #eee; }
+.log-row { display:flex; border-bottom:1px solid #f9f9f9; font-size:0.88rem; }
 .log-row:last-child { border-bottom:none; }
 .lk { width:110px; flex-shrink:0; padding:7px 14px; color:#bbb; font-size:0.8rem; background:#fafafa; }
 .lv { padding:7px 14px; color:#222; font-weight:500; }
 .log-row.ng .lk { background:#fff5f5; color:#e53e3e; }
 .log-row.ng .lv { color:#e53e3e; }
-.log-divider {
-    background:#fff5f5; padding:5px 14px;
-    font-size:0.75rem; color:#e53e3e; font-weight:600;
-    border-top:1px dashed #fca5a5; border-bottom:1px dashed #fca5a5;
-}
-/* proof / verdict */
-.proof-box {
-    background:#fffbeb; border:1px solid #fcd34d;
-    border-radius:8px; padding:14px 18px; margin:16px 0;
-}
+.log-div { background:#fff5f5; padding:5px 14px; font-size:0.75rem;
+    color:#e53e3e; font-weight:600;
+    border-top:1px dashed #fca5a5; border-bottom:1px dashed #fca5a5; }
+.proof-box { background:#fffbeb; border:1px solid #fcd34d;
+    border-radius:8px; padding:14px 18px; margin:16px 0; }
 .proof-title { font-size:0.75rem; font-weight:700; color:#d97706;
-               letter-spacing:0.1em; text-transform:uppercase; margin-bottom:8px; }
+    letter-spacing:0.1em; text-transform:uppercase; margin-bottom:8px; }
 .proof-box p { color:#78350f; font-size:0.92rem; line-height:1.65; margin:0; }
-.verdict-box {
-    background:#fff5f5; border:1px solid #fca5a5;
-    border-radius:8px; padding:14px 18px; margin:10px 0;
-}
-.verdict-item {
-    color:#c53030; font-size:0.88rem; font-weight:600;
-    padding:3px 0; border-bottom:1px solid #fee2e2; line-height:1.5;
-}
+.verdict-box { background:#fff5f5; border:1px solid #fca5a5;
+    border-radius:8px; padding:14px 18px; margin:10px 0; }
+.verdict-item { color:#c53030; font-size:0.88rem; font-weight:600;
+    padding:3px 0; border-bottom:1px solid #fee2e2; line-height:1.5; }
 .verdict-item:last-of-type { border-bottom:none; }
-.verdict-conclusion {
-    margin-top:12px; font-size:0.88rem; color:#742a2a; line-height:1.7;
-    padding-top:10px; border-top:1px solid #fca5a5;
-}
-/* question */
-.q-box {
-    border:2px solid #d97706; background:#fffbeb;
-    border-radius:8px; padding:18px 22px; margin:14px 0;
-}
+.verdict-conclusion { margin-top:12px; font-size:0.88rem; color:#742a2a;
+    line-height:1.7; padding-top:10px; border-top:1px solid #fca5a5; }
+.gdp-note { background:#f0f4ff; border-left:5px solid #4361ee;
+    border-radius:0 6px 6px 0; padding:14px 18px; margin:0 0 18px; }
+.gdp-note .gn-label { font-size:0.75rem; font-weight:700; color:#4361ee;
+    letter-spacing:0.1em; text-transform:uppercase; margin-bottom:8px; }
+.gdp-note .gn-main { color:#1e3a8a; font-size:0.92rem; font-weight:600;
+    margin-bottom:6px; line-height:1.5; }
+.gdp-note .gn-sub { color:#1e40af; font-size:0.88rem; line-height:1.65; }
+.q-box { border:2px solid #d97706; background:#fffbeb;
+    border-radius:8px; padding:18px 22px; margin:14px 0; }
 .q-label { font-size:0.72rem; font-weight:700; color:#d97706;
-           letter-spacing:0.1em; text-transform:uppercase; margin-bottom:8px; }
+    letter-spacing:0.1em; text-transform:uppercase; margin-bottom:8px; }
 .q-text  { font-size:1.05rem; font-weight:800; color:#78350f; line-height:1.55; }
-/* kinasashi */
-.kinasashi {
-    background:#c53030; color:#fff; border-radius:10px;
-    padding:32px 24px; margin:16px 0; text-align:center;
-}
-.km { font-size:2rem; font-weight:900; letter-spacing:-0.02em; margin-bottom:8px; line-height:1.2; }
+.kinasashi { background:#c53030; color:#fff; border-radius:10px;
+    padding:32px 24px; margin:16px 0; text-align:center; }
+.km { font-size:2rem; font-weight:900; letter-spacing:-0.02em;
+    margin-bottom:8px; line-height:1.2; }
 .ks { font-size:0.85rem; opacity:0.85; line-height:1.75; }
-/* audit q */
-.aq {
-    border-left:3px solid #e53e3e; background:#fff5f5;
-    border-radius:0 6px 6px 0; padding:10px 14px; margin:8px 0;
-}
+.aq { border-left:3px solid #e53e3e; background:#fff5f5;
+    border-radius:0 6px 6px 0; padding:10px 14px; margin:8px 0; }
 .aq-l { font-size:0.7rem; font-weight:700; color:#e53e3e;
-         text-transform:uppercase; letter-spacing:0.08em; margin-bottom:2px; }
+    text-transform:uppercase; letter-spacing:0.08em; margin-bottom:2px; }
 .aq-premise { font-size:0.8rem; color:#aaa; margin-bottom:3px; }
 .aq-q { font-weight:700; color:#742a2a; font-size:0.9rem; margin-bottom:4px; }
 .aq-a { font-size:0.82rem; color:#e53e3e; }
-/* conclusion */
-.con-warn {
-    background:#fffbeb; border-left:5px solid #d97706;
-    border-radius:0 6px 6px 0; padding:14px 18px; margin:12px 0;
-}
+.con-warn { background:#fffbeb; border-left:5px solid #d97706;
+    border-radius:0 6px 6px 0; padding:14px 18px; margin:12px 0; }
 .con-warn p { color:#92400e; font-weight:700; font-size:0.97rem; margin:0 0 4px; line-height:1.5; }
 .con-warn p:last-child { margin:0; }
-.con-box {
-    background:#f7fafc; border-left:5px solid #4a5568;
-    border-radius:0 6px 6px 0; padding:14px 18px; margin:12px 0;
-}
+.con-box { background:#f7fafc; border-left:5px solid #4a5568;
+    border-radius:0 6px 6px 0; padding:14px 18px; margin:12px 0; }
 .con-box p { color:#2d3748; font-weight:500; margin:0 0 5px; line-height:1.65; font-size:0.9rem; }
 .con-box p:last-child { margin:0; }
-.pro-note {
-    border:1px solid #e2e8f0; border-radius:6px;
+.pro-note { border:1px solid #e2e8f0; border-radius:6px;
     padding:12px 16px; margin:12px 0; font-size:0.82rem;
-    color:#718096; line-height:1.75;
-}
+    color:#718096; line-height:1.75; }
 .pro-note strong { color:#4a5568; }
+/* glossary */
+.gloss-term { border-left:3px solid #e2e8f0; padding:9px 16px; margin:8px 0; }
+.gloss-word { font-weight:700; font-size:0.88rem; color:#4a5568; margin-bottom:4px; }
+.gloss-desc { font-size:0.82rem; color:#718096; line-height:1.7; }
+/* dark final section */
+.dark-wrap { background:#0f172a; border-radius:12px; padding:28px 26px; margin:8px 0; }
+.dark-eyebrow { font-size:0.72rem; font-weight:700; color:#64748b;
+    letter-spacing:0.14em; text-transform:uppercase; margin:0 0 20px; }
+.dark-sec-label-blue { font-size:0.72rem; font-weight:700; color:#4361ee;
+    letter-spacing:0.1em; text-transform:uppercase; margin:0 0 12px; }
+.dark-sec-label-amber { font-size:0.72rem; font-weight:700; color:#d97706;
+    letter-spacing:0.1em; text-transform:uppercase; margin:0 0 12px; }
+.dark-body { font-size:0.92rem; color:#cbd5e1; line-height:1.75; margin:0 0 12px; }
+.dark-body strong { color:#e2e8f0; }
+.dark-sub { font-size:0.88rem; color:#94a3b8; line-height:1.7; margin:0 0 8px; }
+.dark-headline { font-size:0.97rem; font-weight:700; color:#f1f5f9;
+    margin:0 0 16px; line-height:1.5; }
+.dark-closer { font-size:0.97rem; font-weight:700; color:#f1f5f9;
+    margin:0 0 6px; line-height:1.5; }
+.badge-row { display:flex; gap:8px; flex-wrap:wrap; margin:4px 0 0; }
+.badge-g  { background:#166534; color:#bbf7d0; padding:4px 12px; border-radius:4px; font-size:0.8rem; font-weight:700; }
+.badge-y  { background:#854d0e; color:#fef9c3; padding:4px 12px; border-radius:4px; font-size:0.8rem; font-weight:700; }
+.badge-b  { background:#1d4ed8; color:#dbeafe; padding:4px 12px; border-radius:4px; font-size:0.8rem; font-weight:700; }
+.badge-r  { background:#991b1b; color:#fee2e2; padding:4px 12px; border-radius:4px; font-size:0.8rem; font-weight:700; }
+.dark-divider { border-top:1px solid #1e293b; margin:24px 0; }
+.dark-cards { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:20px; }
+.dark-card { background:#1e293b; border-radius:6px; padding:12px 14px; }
+.dark-card-label { font-size:0.7rem; color:#64748b; font-weight:600;
+    letter-spacing:0.06em; text-transform:uppercase; margin-bottom:5px; }
+.dark-card-text { font-size:0.88rem; color:#e2e8f0; font-weight:600; line-height:1.5; }
+.dark-note { font-size:0.75rem; color:#475569; margin:16px 0 0;
+    line-height:1.6; border-top:1px solid #1e293b; padding-top:14px; }
 /* footer */
-.adic-footer {
-    margin-top:40px; padding-top:16px; border-top:1px solid #eee;
-    color:#bbb; font-size:0.78rem; line-height:1.9;
-}
+.adic-footer { margin-top:40px; padding-top:16px; border-top:1px solid #eee;
+    color:#bbb; font-size:0.78rem; line-height:1.9; }
 .adic-footer a { color:#bbb; text-decoration:underline; }
 /* button */
 div.stButton > button {
@@ -195,6 +174,21 @@ AUDIT_4Q = [
     ("入庫記録はあります。",
      "出荷可否判断まで責任が連続していますか？",
      "入庫から出荷判断への責任連鎖を一つながりで再構成できません。"),
+]
+
+GLOSSARY = [
+    ("SOP",
+     "社内の作業手順書。誰が・どの条件で・どう作業するかを定めたルール。温度管理・積み替え手順・受領確認など、各工程ごとに存在する。"),
+    ("GDP（Good Distribution Practice）",
+     "医薬品を安全に保管・輸送するための品質管理基準。製造後、病院や患者に届くまでのサプライチェーン全体に適用される。EU・日本ともに外部委託先への管理責任・書面契約・監査を要求している。"),
+    ("逸脱",
+     "決められた温度・時間・手順などから外れること。逸脱が起きた場合は原因・影響・対応を記録し、品質判断を経る必要がある。"),
+    ("証跡（しょうせき）",
+     "あとから「何が起きたか」「誰が判断したか」「どの条件で進めたか」を確認できる記録。単に記録が存在するだけでなく、1件の出来事として結合されていることが重要。"),
+    ("受け渡しID",
+     "1回の受け渡しイベントに紐づく識別子。温度ログ・作業ログ・受領記録が同じIDを持つことで「この受け渡しの証跡」として結合できる。これがないと、記録はあっても別々のデータのまま。"),
+    ("ADICが見ているもの",
+     "記録の有無ではなく、それらの記録が「1件の受け渡し」として結合されているか。SOPも契約も温度ログも揃っていても、受け渡しIDでつながっていなければ、監査のたびに人が探してつなぎ直す必要が生じる。"),
 ]
 
 # ── Title + shock (always visible) ─────────────
@@ -240,63 +234,44 @@ if step == 1:
 st.markdown("## STEP 2 ── 記録はある。でも、同じ受け渡しを証明していない")
 
 st.markdown("""
-<div style="background:#f0f4ff;border-left:5px solid #4361ee;border-radius:0 6px 6px 0;padding:14px 18px;margin:0 0 18px">
-  <p style="font-size:0.75rem;font-weight:700;color:#4361ee;letter-spacing:0.1em;text-transform:uppercase;margin:0 0 8px">このデモの前提</p>
-  <p style="color:#1e3a8a;font-size:0.92rem;margin:0 0 6px;font-weight:600">
-    GDP対応していない現場を想定していません。<br>
-    むしろ、SOP（作業手順）・契約・温度ログ・入出庫記録が<strong>すべて揃っている現場</strong>を想定しています。
-  </p>
-  <p style="color:#1e40af;font-size:0.88rem;margin:0;line-height:1.65">
-    問いは一つです。<br>
-    それらの記録を、<strong>後から人が探して説明するのではなく</strong>、<br>
-    この1件の受け渡し証跡として、機械的に結合できますか？
-  </p>
+<div class="gdp-note">
+  <div class="gn-label">このデモの前提</div>
+  <div class="gn-main">GDP対応していない現場を想定していません。<br>むしろ、SOP（作業手順）・契約・温度ログ・入出庫記録がすべて揃っている現場を想定しています。</div>
+  <div class="gn-sub">問いは一つです。それらの記録を、後から人が探して説明するのではなく、この1件の受け渡し証跡として、機械的に結合できますか？</div>
 </div>
-
 <div class="pivot-note">
-  B物流 → 大阪DC の受け渡しは、配送中の「温度を守る責任」から<br>
-  倉庫での「受け取り・保管・出荷可否を判断する責任」に<strong>切り替わる唯一の瞬間</strong>です。<br>
-  だからここだけは、誰がどんな条件で引き受けたかの証跡が必要です。
+  B物流 → 大阪DC の受け渡しは、配送中の「温度を守る責任」から倉庫での「受け取り・保管・出荷可否を判断する責任」に<strong>切り替わる唯一の瞬間</strong>です。だからここだけは、誰がどんな条件で引き受けたかの証跡が必要です。
 </div>
-<div class="log-header">B物流 → 大阪DC ／ 2026-05-10 12:00 ／ 実際のログ</div>
-
+<div class="log-hdr">B物流 → 大阪DC ／ 2026-05-10 12:00 ／ 実際のログ</div>
 <div class="log-card">
   <div class="log-card-title">📊 温度ログ</div>
   <div class="log-row"><div class="lk">時刻</div><div class="lv">12:00</div></div>
   <div class="log-row"><div class="lk">実測温度</div><div class="lv">5.2℃</div></div>
   <div class="log-row"><div class="lk">配送 ID</div><div class="lv">DEL-2026-0501</div></div>
-  <div class="log-divider">↓ ここから先が空欄</div>
+  <div class="log-div">↓ ここから先が空欄</div>
   <div class="log-row ng"><div class="lk">受け渡し ID</div><div class="lv">── 別システム（手動確認が必要）</div></div>
   <div class="log-row ng"><div class="lk">受領者</div><div class="lv">── 承認記録あり / 本受け渡しに未結合</div></div>
   <div class="log-row ng"><div class="lk">受領条件</div><div class="lv">── SOP参照 / 自動結合なし</div></div>
 </div>
-
 <div class="log-card">
   <div class="log-card-title">📋 作業ログ</div>
   <div class="log-row"><div class="lk">時刻</div><div class="lv">12:00</div></div>
   <div class="log-row"><div class="lk">作業</div><div class="lv">B物流 → 大阪DC 引き渡し</div></div>
   <div class="log-row"><div class="lk">配送 ID</div><div class="lv">DEL-2026-0501</div></div>
-  <div class="log-divider">↓ ここから先が空欄</div>
+  <div class="log-div">↓ ここから先が空欄</div>
   <div class="log-row ng"><div class="lk">受け渡し ID</div><div class="lv">── 別システム（手動確認が必要）</div></div>
   <div class="log-row ng"><div class="lk">受領条件</div><div class="lv">── 契約書参照 / 自動結合なし</div></div>
   <div class="log-row ng"><div class="lk">品質責任者</div><div class="lv">── 権限記録あり / 受け渡しに未結合</div></div>
 </div>
-
 <div class="proof-box">
   <div class="proof-title">荷主が証明を求めること</div>
-  <p>大阪DCは、5.2℃の状態を確認し、<br>
-     2〜8℃条件の貨物として、品質責任を引き受けた。</p>
+  <p>大阪DCは、5.2℃の状態を確認し、2〜8℃条件の貨物として、品質責任を引き受けた。</p>
 </div>
-
 <div class="verdict-box">
   <div class="verdict-item">✗ 温度ログと作業ログをつなぐ受け渡しIDがない</div>
   <div class="verdict-item">✗ 大阪DCが温度条件を確認した記録がない</div>
   <div class="verdict-item">✗ 大阪DCが品質責任を引き受けた記録がない</div>
-  <div class="verdict-conclusion">
-    記録がないのではありません。<strong>記録はあります</strong>。<br>
-    しかし、監査のたびに<strong>人が探してつなぎ直している</strong>のであれば、<br>
-    それは証跡の結合ではなく、説明の再構成です。
-  </div>
+  <div class="verdict-conclusion">記録がないのではありません。<strong>記録はあります</strong>。しかし、監査のたびに<strong>人が探してつなぎ直している</strong>のであれば、それは証跡の結合ではなく、説明の再構成です。</div>
 </div>
 """, unsafe_allow_html=True)
 
@@ -314,11 +289,7 @@ st.markdown(
 st.markdown("""
 <div class="q-box">
   <div class="q-label">A製薬（荷主）からの質問</div>
-  <div class="q-text">
-    この配送 DEL-2026-0501 の 12:00 の受け渡しについて——<br>
-    契約上の温度条件、実測温度、受領者、受領承認が、<br>
-    同じ受け渡し証跡として出せますか？
-  </div>
+  <div class="q-text">この配送 DEL-2026-0501 の 12:00 の受け渡しについて——契約上の温度条件、実測温度、受領者、受領承認が、同じ受け渡し証跡として出せますか？</div>
 </div>
 """, unsafe_allow_html=True)
 
@@ -326,16 +297,11 @@ if step == 3:
     st.button("回答を確認する →", on_click=advance)
     st.stop()
 
-# ── STEP 4 : 記録なし ───────────────────────────
+# ── STEP 4: 記録なし ────────────────────────────
 st.markdown("""
 <div class="kinasashi">
   <div class="km">人が探して<br>つなぎ直す必要があります。</div>
-  <div class="ks">
-    温度ログはあります。作業ログもあります。SOPも契約もあります。<br>
-    しかし「12:00 の受け渡しで大阪DCが何℃条件・誰の引受権限で受け取ったか」を<br>
-    機械的に1本の証跡として結合できていません。<br>
-    監査のたびに、誰かが記録を探してつなぎ直しています。
-  </div>
+  <div class="ks">温度ログはあります。作業ログもあります。SOPも契約もあります。しかし「12:00の受け渡しで大阪DCが何℃条件・誰の引受権限で受け取ったか」を機械的に1本の証跡として結合できていません。監査のたびに、誰かが記録を探してつなぎ直しています。</div>
 </div>
 """, unsafe_allow_html=True)
 
@@ -366,164 +332,107 @@ if step == 5:
 
 # ── STEP 5: 結論 ────────────────────────────────
 st.markdown("## STEP 5 ── この配送の「完了」は何を意味するか")
-
 st.markdown("""
 <div class="con-warn">
   <p>この配送は、温度が守られていました。</p>
   <p>事故は起きていません。SOPも契約もあります。</p>
-  <p style="margin-top:8px">それでも、荷主監査では<strong>説明不能</strong>です。</p>
+  <p>それでも、荷主監査では<strong>説明不能</strong>です。</p>
 </div>
 """, unsafe_allow_html=True)
-
-st.markdown("""
-<p style="color:#444;line-height:1.75;margin:12px 0;font-size:0.9rem">
-B物流 → 大阪DC の一点で、<strong>温度ログ・作業ログ・受領記録が同じ受け渡しイベントとして結合されていません</strong>。<br>
-その後の保管・出荷・使用のすべてが、この一点を起点に宙に浮いています。
-</p>
-""", unsafe_allow_html=True)
-
+st.markdown(
+    "<p style='color:#444;line-height:1.75;margin:12px 0;font-size:0.9rem'>"
+    "B物流 → 大阪DC の一点で、<strong>温度ログ・作業ログ・受領記録が同じ受け渡しイベントとして結合されていません</strong>。その後の保管・出荷・使用のすべてが、この一点を起点に宙に浮いています。</p>",
+    unsafe_allow_html=True,
+)
 st.markdown("""
 <div class="con-warn">
   <p>事故が起きていない日にも、説明不能な配送は完了扱いになっています。</p>
   <p>本当に危ない関門は少ない。でも、そこを外すと会社ごと説明不能になります。</p>
 </div>
-
 <div class="con-box">
   <p>温度が守られていたかだけでは、足りません。</p>
   <p>その温度条件のもとで、誰が品質責任を受け取り、どこで止められたかまで、<strong>1本の証跡として再構成できなければ</strong>、内部統制としては不十分です。</p>
 </div>
-
 <div class="pro-note">
   <strong>製薬物流・品質保証・GDP対応済みの現場の方へ：</strong><br>
-  「うちはGDP・SOP・委託先監査・温度ロガー・WMSで対応しています」——それは正しいです。<br>
-  このデモはその対応を否定しません。<br>
-  問いはただ一つ：<strong>個別の受け渡し単位で、その記録を後から人が探すことなく機械的に1本の証跡として結合できますか？</strong><br>
+  「うちはGDP・SOP・委託先監査・温度ロガー・WMSで対応しています」——それは正しいです。このデモはその対応を否定しません。問いはただ一つ：<strong>個別の受け渡し単位で、その記録を後から人が探すことなく機械的に1本の証跡として結合できますか？</strong><br>
   「はい」と答えられる現場には、このデモは刺さりません。そうでなければ、刺さります。
 </div>
-
-<div class="adic-footer">
-  この「記録はあるが結合されていない」状態を機械的に検出し、受け渡し単位で証跡を自動結合する内部統制レイヤー：<strong>ADIC</strong>（Advanced Data Integrity by Ledger of Computation）<br>
-  GhostDrift数理研究所 ／ <a href="https://www.ghostdriftresearch.com">ghostdriftresearch.com</a><br>
-  Lean 4 形式証明：<a href="https://github.com/GhostDriftTheory/adic-lean-proof-replay">github.com/GhostDriftTheory/adic-lean-proof-replay</a>
-</div>
 """, unsafe_allow_html=True)
-
 
 # ── 用語解説 ────────────────────────────────────
 st.markdown("---")
 st.markdown(
-    "<p style=\'font-size:0.72rem;font-weight:700;color:#aaa;letter-spacing:0.14em;"
-    "text-transform:uppercase;margin:0 0 14px\'>このデモで出てくる言葉</p>",
+    "<p style='font-size:0.72rem;font-weight:700;color:#aaa;letter-spacing:0.14em;"
+    "text-transform:uppercase;margin:0 0 14px'>このデモで出てくる言葉</p>",
     unsafe_allow_html=True,
 )
-
-glossary_terms = [
-    ("SOP",
-     "社内の作業手順書。誰が・どの条件で・どう作業するかを定めたルール。<br>"
-     "温度管理・積み替え手順・受領確認など、各工程ごとに存在する。"),
-    ("GDP（Good Distribution Practice）",
-     "医薬品を安全に保管・輸送するための品質管理基準。<br>"
-     "製造後、病院や患者に届くまでのサプライチェーン全体に適用される。<br>"
-     "EU・日本ともに、外部委託先への管理責任・書面契約・監査を要求している。"),
-    ("逸脱",
-     "決められた温度・時間・手順などから外れること。<br>"
-     "逸脱が起きた場合は、原因・影響・対応を記録し、品質判断を経る必要がある。"),
-    ("証跡（しょうせき）",
-     "あとから「何が起きたか」「誰が判断したか」「どの条件で進めたか」を確認できる記録。<br>"
-     "単に記録が存在するだけでなく、1件の出来事として結合されていることが重要。"),
-    ("受け渡しID",
-     "1回の受け渡しイベントに紐づく識別子。<br>"
-     "温度ログ・作業ログ・受領記録が同じIDを持つことで「この受け渡しの証跡」として結合できる。<br>"
-     "これがないと、記録はあっても別々のデータのままになる。"),
-    ("ADICが見ているもの",
-     "記録の有無ではなく、それらの記録が「1件の受け渡し」として結合されているか。<br>"
-     "SOPも契約も温度ログも揃っていても、受け渡しIDでつながっていなければ、<br>"
-     "監査のたびに人が探してつなぎ直す必要が生じる。"),
-]
-
-for term, desc in glossary_terms:
-    st.markdown(f"""
-<div style="border-left:3px solid #e2e8f0;padding:9px 16px;margin:8px 0">
-  <div style="font-weight:700;font-size:0.88rem;color:#4a5568;margin-bottom:4px">{term}</div>
-  <div style="font-size:0.82rem;color:#718096;line-height:1.7">{desc}</div>
-</div>
-""", unsafe_allow_html=True)
+for term, desc in GLOSSARY:
+    st.markdown(
+        f'<div class="gloss-term"><div class="gloss-word">{term}</div>'
+        f'<div class="gloss-desc">{desc}</div></div>',
+        unsafe_allow_html=True,
+    )
 
 # ── このデモの射程 ───────────────────────────────
 st.markdown("---")
+st.markdown('<div class="dark-wrap">', unsafe_allow_html=True)
+st.markdown('<p class="dark-eyebrow">このデモから拡張できること</p>', unsafe_allow_html=True)
+
+# Section 1
+st.markdown('<p class="dark-sec-label-blue">1. コールドチェーンの品質管理へ</p>', unsafe_allow_html=True)
+st.markdown(
+    '<p class="dark-body">コールドチェーンで本当に危ないのは、配送全体ではありません。'
+    '<strong>受け渡し・積み替え・一時保管のように、責任と判断が切り替わる瞬間</strong>です。</p>',
+    unsafe_allow_html=True,
+)
+st.markdown(
+    '<p class="dark-body">このデモは、その瞬間だけを切り出し、温度ログ・作業ログ・受領条件・承認記録を'
+    '<strong>1件の受け渡し証跡として結合する</strong>入口です。</p>',
+    unsafe_allow_html=True,
+)
+st.markdown('<p class="dark-sub">これにより、次の判断が記録に基づいて行えるようになります：</p>', unsafe_allow_html=True)
 st.markdown("""
-<div style="background:#0f172a;color:#fff;border-radius:12px;padding:28px 26px;margin:8px 0">
-  <p style="font-size:0.72rem;font-weight:700;color:#64748b;letter-spacing:0.14em;
-            text-transform:uppercase;margin:0 0 20px">このデモから拡張できること</p>
-
-  <!-- 1. コールドチェーン品質管理 -->
-  <div style="margin-bottom:28px">
-    <p style="font-size:0.72rem;font-weight:700;color:#4361ee;letter-spacing:0.1em;
-              text-transform:uppercase;margin:0 0 12px">1. コールドチェーンの品質管理へ</p>
-
-    <p style="font-size:0.92rem;color:#cbd5e1;line-height:1.75;margin:0 0 12px">
-      コールドチェーンで本当に危ないのは、配送全体ではありません。<br>
-      <strong style="color:#e2e8f0">受け渡し・積み替え・一時保管のように、責任と判断が切り替わる瞬間</strong>です。
-    </p>
-
-    <p style="font-size:0.92rem;color:#cbd5e1;line-height:1.75;margin:0 0 12px">
-      このデモは、その瞬間だけを切り出し、<br>
-      温度ログ・作業ログ・受領条件・承認記録を<br>
-      <strong style="color:#e2e8f0">1件の受け渡し証跡として結合する</strong>入口です。
-    </p>
-
-    <p style="font-size:0.88rem;color:#94a3b8;line-height:1.7;margin:0 0 8px">これにより、次の判断が記録に基づいて行えるようになります：</p>
-
-    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:4px">
-      <span style="background:#166534;color:#bbf7d0;padding:4px 12px;border-radius:4px;font-size:0.8rem;font-weight:700">RELEASE そのまま出荷</span>
-      <span style="background:#854d0e;color:#fef9c3;padding:4px 12px;border-radius:4px;font-size:0.8rem;font-weight:700">HOLD 一時保留</span>
-      <span style="background:#1d4ed8;color:#dbeafe;padding:4px 12px;border-radius:4px;font-size:0.8rem;font-weight:700">QA_REVIEW 品質確認</span>
-      <span style="background:#991b1b;color:#fee2e2;padding:4px 12px;border-radius:4px;font-size:0.8rem;font-weight:700">REJECT 出荷不可</span>
-    </div>
-  </div>
-
-  <div style="border-top:1px solid #1e293b;padding-top:24px">
-    <p style="font-size:0.72rem;font-weight:700;color:#d97706;letter-spacing:0.1em;
-              text-transform:uppercase;margin:0 0 12px">2. 自律型AI物流の前提へ</p>
-
-    <p style="font-size:0.92rem;color:#cbd5e1;line-height:1.75;margin:0 0 16px">
-      AIが配車・在庫・出荷判断に入るほど、<br>
-      判断の理由をあとから人が探して説明する運用では、<strong style="color:#e2e8f0">限界が来ます</strong>。
-    </p>
-
-    <p style="font-size:0.95rem;font-weight:700;color:#f1f5f9;margin:0 0 16px;line-height:1.5">
-      必要になるのは、<br>最初から機械的に監査できる物流です。
-    </p>
-
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px">
-      <div style="background:#1e293b;border-radius:6px;padding:12px 14px">
-        <div style="font-size:0.7rem;color:#64748b;font-weight:600;letter-spacing:0.06em;
-                    text-transform:uppercase;margin-bottom:5px">荷主にとって</div>
-        <div style="font-size:0.88rem;color:#e2e8f0;font-weight:600;line-height:1.5">
-          委託先を含めた<br>サプライチェーンを<br>説明できる力
-        </div>
-      </div>
-      <div style="background:#1e293b;border-radius:6px;padding:12px 14px">
-        <div style="font-size:0.7rem;color:#64748b;font-weight:600;letter-spacing:0.06em;
-                    text-transform:uppercase;margin-bottom:5px">物流会社にとって</div>
-        <div style="font-size:0.88rem;color:#e2e8f0;font-weight:600;line-height:1.5">
-          選ばれ続けるための<br>証明能力
-        </div>
-      </div>
-    </div>
-
-    <p style="font-size:0.95rem;font-weight:700;color:#f1f5f9;margin:0 0 6px;line-height:1.5">
-      AI物流の時代に、監査できない物流はブラックボックスになります。<br>
-      監査できる物流だけが、荷主から選ばれ続けます。
-    </p>
-
-    <p style="font-size:0.75rem;color:#475569;margin:16px 0 0;line-height:1.6;border-top:1px solid #1e293b;padding-top:14px">
-      ※内部的には、責任が切り替わる瞬間を切り出し、ADICで証跡を結合し、品質判断へ接続する構成です。
-    </p>
-  </div>
+<div class="badge-row">
+  <span class="badge-g">RELEASE そのまま出荷</span>
+  <span class="badge-y">HOLD 一時保留</span>
+  <span class="badge-b">QA_REVIEW 品質確認</span>
+  <span class="badge-r">REJECT 出荷不可</span>
 </div>
 """, unsafe_allow_html=True)
 
+st.markdown('<div class="dark-divider"></div>', unsafe_allow_html=True)
+
+# Section 2
+st.markdown('<p class="dark-sec-label-amber">2. 自律型AI物流の前提へ</p>', unsafe_allow_html=True)
+st.markdown(
+    '<p class="dark-body">AIが配車・在庫・出荷判断に入るほど、判断の理由をあとから人が探して説明する運用では、<strong>限界が来ます</strong>。</p>',
+    unsafe_allow_html=True,
+)
+st.markdown('<p class="dark-headline">必要になるのは、最初から機械的に監査できる物流です。</p>', unsafe_allow_html=True)
+st.markdown("""
+<div class="dark-cards">
+  <div class="dark-card">
+    <div class="dark-card-label">荷主にとって</div>
+    <div class="dark-card-text">委託先を含めたサプライチェーンを説明できる力</div>
+  </div>
+  <div class="dark-card">
+    <div class="dark-card-label">物流会社にとって</div>
+    <div class="dark-card-text">選ばれ続けるための証明能力</div>
+  </div>
+</div>
+""", unsafe_allow_html=True)
+st.markdown(
+    '<p class="dark-closer">AI物流の時代に、監査できない物流はブラックボックスになります。<br>監査できる物流だけが、荷主から選ばれ続けます。</p>',
+    unsafe_allow_html=True,
+)
+st.markdown(
+    '<p class="dark-note">※内部的には、責任が切り替わる瞬間を切り出し、ADICで証跡を結合し、品質判断へ接続する構成です。</p>',
+    unsafe_allow_html=True,
+)
+st.markdown('</div>', unsafe_allow_html=True)
+
+# ── Footer ──────────────────────────────────────
 st.markdown("""
 <div class="adic-footer">
   ADIC（Advanced Data Integrity by Ledger of Computation）<br>
