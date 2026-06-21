@@ -291,21 +291,28 @@ if step == 2:
     st.stop()
 
 # ── STEP 3 ─────────────────────────────────────
-st.markdown("## STEP 3 ── 荷主から、一問だけ来ます")
-st.markdown(
-    "<p style='color:#bbb;font-size:0.82rem;margin:4px 0 12px'>"
-    "受け渡し：B物流 → 大阪DC ／ 2026-05-10 12:00</p>",
-    unsafe_allow_html=True,
-)
+st.markdown("## STEP 3 ── 荷主から、こんな問い合わせが来ました")
 st.markdown("""
 <div class="q-box">
-  <div class="q-label">A製薬（荷主）からの質問</div>
-  <div class="q-text">この配送 DEL-2026-0501 の 12:00 の受け渡しについて——契約上の温度条件、実測温度、受領者、受領承認が、同じ受け渡し証跡として出せますか？</div>
+  <div class="q-label">A製薬（荷主）からの問い合わせ ／ 2026-05-10 大阪DC受け渡し分</div>
+  <div class="q-text">先日の配送ですが、大阪DCへの引き渡し時に<br>誰がどんな条件で受け取ったか確認したいので、<br>受け渡し時の記録を1枚送ってもらえますか。<br><br>
+  具体的には——<br>
+  ・受け取った担当者の名前<br>
+  ・受け取った時の温度<br>
+  ・2〜8℃の製品として受け取ったことの確認<br>
+  ・問題があれば止める条件を確認したかどうか<br><br>
+  よろしくお願いします。</div>
+</div>
+""", unsafe_allow_html=True)
+st.markdown("""
+<div class="proof-box" style="margin-top:12px">
+  <div class="proof-title">本来なら即答できるべきこと</div>
+  <p>「はい。2026-05-10 12:00、大阪DC 山田花子が、5.2℃を確認のうえ 2〜8℃条件の製品として受け取りました。停止条件は確認済み、受領承認番号は ACC-XXX です。」</p>
 </div>
 """, unsafe_allow_html=True)
 
 if step == 3:
-    st.button("回答を確認する →", on_click=advance)
+    st.button("実際に出せるものを確認する →", on_click=advance)
     st.stop()
 
 # ── STEP 4: 記録なし ────────────────────────────
