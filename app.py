@@ -454,79 +454,71 @@ st.markdown("---")
 st.markdown("""
 <div style="background:#0f172a;color:#fff;border-radius:12px;padding:28px 26px;margin:8px 0">
   <p style="font-size:0.72rem;font-weight:700;color:#64748b;letter-spacing:0.14em;
-            text-transform:uppercase;margin:0 0 14px">このデモの先にあるもの</p>
+            text-transform:uppercase;margin:0 0 20px">このデモから拡張できること</p>
 
-  <p style="font-size:1.05rem;font-weight:800;color:#fff;margin:0 0 20px;line-height:1.4">
-    B物流 → 大阪DC の受け渡しを、3つのレイヤーで処理します。
-  </p>
+  <!-- 1. コールドチェーン品質管理 -->
+  <div style="margin-bottom:28px">
+    <p style="font-size:0.72rem;font-weight:700;color:#4361ee;letter-spacing:0.1em;
+              text-transform:uppercase;margin:0 0 12px">1. コールドチェーンの品質管理へ</p>
 
-  <div style="display:grid;gap:1px;background:#1e293b;border-radius:8px;overflow:hidden;margin-bottom:24px">
+    <p style="font-size:0.92rem;color:#cbd5e1;line-height:1.75;margin:0 0 12px">
+      コールドチェーンで本当に危ないのは、配送全体ではありません。<br>
+      <strong style="color:#e2e8f0">受け渡し・積み替え・一時保管のように、責任と判断が切り替わる瞬間</strong>です。
+    </p>
 
-    <div style="background:#1e293b;padding:14px 18px">
-      <div style="font-size:0.72rem;font-weight:700;color:#94a3b8;letter-spacing:0.1em;
-                  text-transform:uppercase;margin-bottom:6px">UWP（有限窓）</div>
-      <div style="font-size:0.92rem;font-weight:700;color:#e2e8f0;margin-bottom:4px">
-        責任が切り替わる瞬間だけを切り出す
-      </div>
-      <div style="font-size:0.82rem;color:#94a3b8;line-height:1.6">
-        配送全行程を監視するのではなく、B物流→大阪DCの12:00という<br>
-        「誰が・どの条件を引き受けるか」が決まる瞬間だけを有限の窓として切り出す。
-      </div>
+    <p style="font-size:0.92rem;color:#cbd5e1;line-height:1.75;margin:0 0 12px">
+      このデモは、その瞬間だけを切り出し、<br>
+      温度ログ・作業ログ・受領条件・承認記録を<br>
+      <strong style="color:#e2e8f0">1件の受け渡し証跡として結合する</strong>入口です。
+    </p>
+
+    <p style="font-size:0.88rem;color:#94a3b8;line-height:1.7;margin:0 0 8px">これにより、次の判断が記録に基づいて行えるようになります：</p>
+
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:4px">
+      <span style="background:#166534;color:#bbf7d0;padding:4px 12px;border-radius:4px;font-size:0.8rem;font-weight:700">RELEASE そのまま出荷</span>
+      <span style="background:#854d0e;color:#fef9c3;padding:4px 12px;border-radius:4px;font-size:0.8rem;font-weight:700">HOLD 一時保留</span>
+      <span style="background:#1d4ed8;color:#dbeafe;padding:4px 12px;border-radius:4px;font-size:0.8rem;font-weight:700">QA_REVIEW 品質確認</span>
+      <span style="background:#991b1b;color:#fee2e2;padding:4px 12px;border-radius:4px;font-size:0.8rem;font-weight:700">REJECT 出荷不可</span>
     </div>
-
-    <div style="background:#172033;padding:14px 18px">
-      <div style="font-size:0.72rem;font-weight:700;color:#94a3b8;letter-spacing:0.1em;
-                  text-transform:uppercase;margin-bottom:6px">ADIC</div>
-      <div style="font-size:0.92rem;font-weight:700;color:#e2e8f0;margin-bottom:4px">
-        温度ログ・作業ログ・受領記録を1本の証跡として結合する
-      </div>
-      <div style="font-size:0.82rem;color:#94a3b8;line-height:1.6">
-        別々に存在する記録を同一の受け渡しイベントとして束ね、<br>
-        あとから人が探してつなぎ直す必要をなくす。
-      </div>
-    </div>
-
-    <div style="background:#1e293b;padding:14px 18px">
-      <div style="font-size:0.72rem;font-weight:700;color:#94a3b8;letter-spacing:0.1em;
-                  text-transform:uppercase;margin-bottom:6px">品質判断（PDE）</div>
-      <div style="font-size:0.92rem;font-weight:700;color:#e2e8f0;margin-bottom:4px">
-        この貨物をどうするか、機械的に判定する
-      </div>
-      <div style="font-size:0.82rem;margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">
-        <span style="background:#166534;color:#bbf7d0;padding:3px 10px;border-radius:4px;font-size:0.78rem;font-weight:700">RELEASE</span>
-        <span style="background:#854d0e;color:#fef9c3;padding:3px 10px;border-radius:4px;font-size:0.78rem;font-weight:700">HOLD</span>
-        <span style="background:#1d4ed8;color:#dbeafe;padding:3px 10px;border-radius:4px;font-size:0.78rem;font-weight:700">QA_REVIEW</span>
-        <span style="background:#991b1b;color:#fee2e2;padding:3px 10px;border-radius:4px;font-size:0.78rem;font-weight:700">REJECT</span>
-      </div>
-    </div>
-
   </div>
 
-  <div style="border-top:1px solid #1e293b;padding-top:20px">
-    <p style="font-size:0.95rem;font-weight:700;color:#e2e8f0;margin:0 0 12px;line-height:1.5">
+  <div style="border-top:1px solid #1e293b;padding-top:24px">
+    <p style="font-size:0.72rem;font-weight:700;color:#d97706;letter-spacing:0.1em;
+              text-transform:uppercase;margin:0 0 12px">2. 自律型AI物流の前提へ</p>
+
+    <p style="font-size:0.92rem;color:#cbd5e1;line-height:1.75;margin:0 0 16px">
       AIが配車・在庫・出荷判断に入るほど、<br>
-      「あとから人が説明する物流」ではなく<br>
-      「最初から機械的に監査できる物流」が選ばれます。
+      判断の理由をあとから人が探して説明する運用では、<strong style="color:#e2e8f0">限界が来ます</strong>。
     </p>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px">
+
+    <p style="font-size:0.95rem;font-weight:700;color:#f1f5f9;margin:0 0 16px;line-height:1.5">
+      必要になるのは、<br>最初から機械的に監査できる物流です。
+    </p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px">
       <div style="background:#1e293b;border-radius:6px;padding:12px 14px">
-        <div style="font-size:0.72rem;color:#64748b;font-weight:600;letter-spacing:0.06em;
+        <div style="font-size:0.7rem;color:#64748b;font-weight:600;letter-spacing:0.06em;
                     text-transform:uppercase;margin-bottom:5px">荷主にとって</div>
         <div style="font-size:0.88rem;color:#e2e8f0;font-weight:600;line-height:1.5">
-          サプライチェーンを<br>説明できる力
+          委託先を含めた<br>サプライチェーンを<br>説明できる力
         </div>
       </div>
       <div style="background:#1e293b;border-radius:6px;padding:12px 14px">
-        <div style="font-size:0.72rem;color:#64748b;font-weight:600;letter-spacing:0.06em;
+        <div style="font-size:0.7rem;color:#64748b;font-weight:600;letter-spacing:0.06em;
                     text-transform:uppercase;margin-bottom:5px">物流会社にとって</div>
         <div style="font-size:0.88rem;color:#e2e8f0;font-weight:600;line-height:1.5">
           選ばれ続けるための<br>証明能力
         </div>
       </div>
     </div>
-    <p style="font-size:0.82rem;color:#64748b;margin:16px 0 0;line-height:1.65">
+
+    <p style="font-size:0.95rem;font-weight:700;color:#f1f5f9;margin:0 0 6px;line-height:1.5">
       AI物流の時代に、監査できない物流はブラックボックスになります。<br>
       監査できる物流だけが、荷主から選ばれ続けます。
+    </p>
+
+    <p style="font-size:0.75rem;color:#475569;margin:16px 0 0;line-height:1.6;border-top:1px solid #1e293b;padding-top:14px">
+      ※内部的には、責任が切り替わる瞬間を切り出し、ADICで証跡を結合し、品質判断へ接続する構成です。
     </p>
   </div>
 </div>
